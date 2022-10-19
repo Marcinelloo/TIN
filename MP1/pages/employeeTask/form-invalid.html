@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+    <title>Task Manager</title>
+</head>
+<body>
+    <header>
+        <h1>Task Manager</h1>
+        <img src="../../images/logo.png" alt="Task Manager Logo" width="100"/>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="/index.html">Strona główna</a>
+            </li>
+            <li>
+                <a href="/pages/employee/list.html">Pracownicy</a>
+            </li>
+            <li>
+                <a href="/pages/employeeTask/list.html">Zadania Pracownikow</a>
+            </li>
+            <li>
+                <a href="/pages/task/list.html">Zadania</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Nowe zadanie pracownika:</h2>
+        <from>
+            <label for="employee" >Pracownik: *</label>
+            <select  name="employee" id="employee" required >
+                <option>-- Wybierz pracownika --</option>
+                <option value="1">Andrzej</option>
+                <option value="2">Adam</option>
+                <option value="3">Marcin</option>
+           </select>
+            <span id="errorEmployee">Pole jest wymagane</span>
+          
+            <label for="task" >Zadanie: *</label>
+            <select  name="task" id="task" required >
+                <option>-- Wybierz zadanie --</option>
+                <option value="1">Zdjecie</option>
+                <option value="2">Chat</option>
+                <option value="3">Konkurs</option>
+           </select>
+            <span id="errorTask">Pole jest wymagane</span>
+
+            <label for="status" >Status: *</label>
+            <input type="text" name="status" id="status" required/>
+            <span id="errorStatus">Pole jest wymagane</span>
+
+            <label for="comment" >Comment: </label>
+            <input type="text" name="comment" id="comment" />
+
+            <div>
+                <p id="errorSumary">Formularz zawiera błedy</p>
+                <input type="submit" value="Dodaj" />
+                <a href="./list.html">Anuluj</a>
+            </div>
+            
+        </from>
+    </main>
+
+    <footer>Marcin, Kulik, s22967</footer>
+    
+</body>
+</html>

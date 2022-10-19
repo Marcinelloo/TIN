@@ -30,27 +30,25 @@
         </ul>
     </nav>
     <main>
-        <h2>Nowy pracownik:</h2>
+        <h2>Edytuj zadanie:</h2>
         <from>
-            <label for="name" >Imię: *</label>
-            <input type="text" name="name" id="name" required/>
-            <span id="errorName"></span>
+           
           
-            <label for="name" >Nazwisko: *</label>
-            <input type="text" name="surname" id="surname" required/>
-            <span id="errorSurname"></span>
+            <label for="title" >Tytuł: *</label>
+            <input type="text" name="title" id="surname" required value="Zdjecie"/>
+            <span id="errorTitle"></span>
 
-            <label for="name" >Email: *</label>
-            <input type="email" name="email" id="email" required/>
-            <span id="errorEmail"></span>
+            <label for="dueTo" >Data zakończenia: *</label>
+            <input type="date" name="dueTo" id="email" required value="2022-10-02"/>
+            <span id="errorDueTo"></span>
 
-            <label for="name" >Password: *</label>
-            <input type="password" name="password" id="password" required/>
-            <span id="errorPassword"></span>
+            <label for="createdAt" >Data Stworzenia: *</label>
+            <input type="date" name="createdAt" id="password" required value="2022-10-02"/>
+            <span id="errorCreatedAt"></span>
 
-            <label for="name" >Active: *</label>
-            <input type="checkbox" name="active" id="active" required/>
-            <span id="errorActive"></span>
+            <label for="description" >Opis: *</label>
+            <input type="text" name="description" id="name" required value="zdjecie"/>
+            <span id="errordescription"></span>
 
             <div>
                 <p id="errorSumary"></p>

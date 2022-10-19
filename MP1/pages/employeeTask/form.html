@@ -30,27 +30,32 @@
         </ul>
     </nav>
     <main>
-        <h2>Nowy pracownik:</h2>
+        <h2>Nowe zadanie pracownika:</h2>
         <from>
-            <label for="name" >Imię: *</label>
-            <input type="text" name="name" id="name" required/>
-            <span id="errorName"></span>
+            <label for="employee" >Pracownik: *</label>
+            <select  name="employee" id="employee" required >
+                <option>-- Wybierz pracownika --</option>
+                <option value="1">Andrzej</option>
+                <option value="2">Adam</option>
+                <option value="3">Marcin</option>
+           </select>
+            <span id="errorEmployee"></span>
           
-            <label for="name" >Nazwisko: *</label>
-            <input type="text" name="surname" id="surname" required/>
-            <span id="errorSurname"></span>
+            <label for="task" >Zadanie: *</label>
+            <select  name="task" id="task" required >
+                <option>-- Wybierz zadanie --</option>
+                <option value="1">Zdjecie</option>
+                <option value="2">Chat</option>
+                <option value="3">Konkurs</option>
+           </select>
+            <span id="errorTask"></span>
 
-            <label for="name" >Email: *</label>
-            <input type="email" name="email" id="email" required/>
-            <span id="errorEmail"></span>
+            <label for="status" >Status: *</label>
+            <input type="text" name="status" id="status" required/>
+            <span id="errorStatus"></span>
 
-            <label for="name" >Password: *</label>
-            <input type="password" name="password" id="password" required/>
-            <span id="errorPassword"></span>
-
-            <label for="name" >Active: *</label>
-            <input type="checkbox" name="active" id="active" required/>
-            <span id="errorActive"></span>
+            <label for="comment" >Comment: </label>
+            <input type="text" name="comment" id="comment" />
 
             <div>
                 <p id="errorSumary"></p>
