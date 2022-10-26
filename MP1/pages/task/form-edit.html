@@ -5,55 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="../../css/style.css"/>
 
     <title>Task Manager</title>
 </head>
 <body>
     <header>
         <h1>Task Manager</h1>
-        <img src="../../images/logo.png" alt="Task Manager Logo" width="100"/>
+        <img src="../../images/logo.png" alt="Task Manager Logo" />
     </header>
     <nav>
         <ul>
             <li>
-                <a href="/index.html">Strona główna</a>
+                <a href="/MP1/index.html">Strona główna</a>
             </li>
             <li>
-                <a href="/pages/employee/list.html">Pracownicy</a>
+                <a href="/MP1/pages/employee/list.html">Pracownicy</a>
             </li>
             <li>
-                <a href="/pages/employeeTask/list.html">Zadania Pracownikow</a>
+                <a href="/MP1/pages/employeeTask/list.html">Zadania Pracownikow</a>
             </li>
             <li>
-                <a href="/pages/task/list.html">Zadania</a>
+                <a href="/MP1/pages/task/list.html" class="active">Zadania</a>
             </li>
         </ul>
     </nav>
     <main>
         <h2>Edytuj zadanie:</h2>
-        <from>
-           
-          
-            <label for="title" >Tytuł: *</label>
+         <form class="form">
+            <label for="title" >Tytuł: <span class="symbol-required"><span class="symbol-required">*</span>
+            </label>
             <input type="text" name="title" id="surname" required value="Zdjecie"/>
             <span id="errorTitle"></span>
 
-            <label for="dueTo" >Data zakończenia: *</label>
+            <label for="dueTo" >Data zakończenia: <span class="symbol-required">*</span></label>
             <input type="date" name="dueTo" id="email" required value="2022-10-02"/>
             <span id="errorDueTo"></span>
 
-            <label for="createdAt" >Data Stworzenia: *</label>
+            <label for="createdAt" >Data Stworzenia: <span class="symbol-required">*</span></label>
             <input type="date" name="createdAt" id="password" required value="2022-10-02"/>
             <span id="errorCreatedAt"></span>
 
-            <label for="description" >Opis: *</label>
+            <label for="description" >Opis: <span class="symbol-required">*</span></label>
             <input type="text" name="description" id="name" required value="zdjecie"/>
             <span id="errordescription"></span>
 
             <div>
                 <p id="errorSumary"></p>
-                <input type="submit" value="Dodaj" />
-                <a href="./list.html">Anuluj</a>
+                <input type="submit" value="Dodaj" class="form-button-submit"/>
+                <a href="./list.html" class="form-button-cancel">Anuluj</a>
             </div>
             
         </from>

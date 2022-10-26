@@ -5,34 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="../../css/style.css"/>
 
     <title>Task Manager</title>
 </head>
 <body>
     <header>
         <h1>Task Manager</h1>
-        <img src="../../images/logo.png" alt="Task Manager Logo" width="100"/>
+        <img src="../../images/logo.png" alt="Task Manager Logo" />
     </header>
     <nav>
         <ul>
             <li>
-                <a href="/index.html">Strona główna</a>
+                <a href="/MP1/index.html">Strona główna</a>
             </li>
             <li>
-                <a href="/pages/employee/list.html">Pracownicy</a>
+                <a href="/MP1/pages/employee/list.html">Pracownicy</a>
             </li>
             <li>
-                <a href="/pages/employeeTask/list.html">Zadania Pracownikow</a>
+                <a href="/MP1/pages/employeeTask/list.html" class="active">Zadania Pracownikow</a>
             </li>
             <li>
-                <a href="/pages/task/list.html">Zadania</a>
+                <a href="/MP1/pages/task/list.html">Zadania</a>
             </li>
         </ul>
     </nav>
     <main>
         <h2>Nowe zadanie pracownika:</h2>
-        <from>
-            <label for="employee" >Pracownik: *</label>
+         <form class="form">
+            <label for="employee" >Pracownik: <span class="symbol-required">*</span></label>
             <select  name="employee" id="employee" required >
                 <option>-- Wybierz pracownika --</option>
                 <option value="1" selected>Andrzej</option>
@@ -41,7 +42,7 @@
            </select>
             <span id="errorEmployee"></span>
           
-            <label for="task" >Zadanie: *</label>
+            <label for="task" >Zadanie: <span class="symbol-required">*</span></label>
             <select  name="task" id="task" required >
                 <option>-- Wybierz zadanie --</option>
                 <option value="1" selected>Zdjecie</option>
@@ -50,7 +51,7 @@
            </select>
             <span id="errorTask"></span>
 
-            <label for="status" >Status: *</label>
+            <label for="status" >Status: <span class="symbol-required">*</span></label>
             <input type="text" name="status" id="status" required value="done"/>
             <span id="errorStatus"></span>
 
@@ -59,8 +60,8 @@
 
             <div>
                 <p id="errorSumary"></p>
-                <input type="submit" value="Dodaj" />
-                <a href="./list.html">Anuluj</a>
+                <input type="submit" value="Dodaj" class="form-button-submit"/>
+                <a href="./list.html" class="form-button-cancel">Anuluj</a>
             </div>
             
         </from>

@@ -5,33 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="../../css/style.css"/>
+
 
     <title>Task Manager</title>
 </head>
 <body>
     <header>
         <h1>Task Manager</h1>
-        <img src="../../images/logo.png" alt="Task Manager Logo" width="100"/>
+        <img src="../../images/logo.png" alt="Task Manager Logo" />
     </header>
     <nav>
         <ul>
             <li>
-                <a href="/index.html">Strona główna</a>
+                <a href="/MP1/index.html">Strona główna</a>
             </li>
             <li>
-                <a href="/pages/employee/list.html">Pracownicy</a>
+                <a href="/MP1/pages/employee/list.html">Pracownicy</a>
             </li>
             <li>
-                <a href="/pages/employeeTask/list.html">Zadania Pracownikow</a>
+                <a href="/MP1/pages/employeeTask/list.html">Zadania Pracownikow</a>
             </li>
             <li>
-                <a href="/pages/task/list.html">Zadania</a>
+                <a href="/MP1/pages/task/list.html" class="active">Zadania</a>
             </li>
         </ul>
     </nav>
     <main>
         <h2>Lista Zadań:</h2>
-        <table>
+        <table class="table-list">
             <thead>
                 <tr>
                     <th>Tytuł</th>
@@ -47,16 +49,16 @@
                     <td>20/10/2022</td>
                     <td>16/10/2022</td>
                     <td>Zaprojektowanie chatu</td>
-                    <td>
-                        <ul>
+                    <td >
+                        <ul class="list-actions">
                             <li>
-                                <a href="./details.html">Szczegóły</a>
+                                <a href="./details.html" class="list-actions-button-details">Szczegóły</a>
                             </li>
                             <li>
-                                <a href="./form-edit.html">Edytuj</a>
+                                <a href="./form-edit.html" class="list-actions-button-edit">Edytuj</a>
                             </li>
                             <li>
-                                <a href="">Usuń</a>
+                                <a href="" class="list-actions-button-delete">Usuń</a>
                             </li>
                         </ul>
                     </td>
@@ -67,22 +69,22 @@
                     <td>16/10/2022</td>
                     <td>Zrobienie zdjeica</td>
                     <td>
-                        <ul>
+                        <ul class="list-actions">
                             <li>
-                                <a href="./details.html">Szczegóły</a>
+                                <a href="./details.html" class="list-actions-button-details">Szczegóły</a>
                             </li>
                             <li>
-                                <a href="./form-edit.html">Edytuj</a>
+                                <a href="./form-edit.html" class="list-actions-button-edit">Edytuj</a>
                             </li>
                             <li>
-                                <a href="">Usuń</a>
+                                <a href="" class="list-actions-button-delete">Usuń</a>
                             </li>
                         </ul>
                     </td>
                 </tr>
             </tbody>
         </table>
-        <p><a href="./form.html">Dodaj nowe zadanie</a></p>
+        <p><a href="./form.html" class="button-add">Dodaj nowe zadanie</a></p>
     </main>
 
     <footer>Marcin, Kulik, s22967</footer>

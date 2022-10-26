@@ -5,59 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="../../css/style.css"/>
 
     <title>Task Manager</title>
 </head>
 <body>
     <header>
         <h1>Task Manager</h1>
-        <img src="../../images/logo.png" alt="Task Manager Logo" width="100"/>
+        <img src="../../images/logo.png" alt="Task Manager Logo" />
     </header>
     <nav>
         <ul>
             <li>
-                <a href="/index.html">Strona główna</a>
+                <a href="/MP1/index.html">Strona główna</a>
             </li>
             <li>
-                <a href="/pages/employee/list.html">Pracownicy</a>
+                <a href="/MP1/pages/employee/list.html" class="active">Pracownicy</a>
             </li>
             <li>
-                <a href="/pages/employeeTask/list.html">Zadania Pracownikow</a>
+                <a href="/MP1/pages/employeeTask/list.html">Zadania Pracownikow</a>
             </li>
             <li>
-                <a href="/pages/task/list.html">Zadania</a>
+                <a href="/MP1/pages/task/list.html">Zadania</a>
             </li>
         </ul>
     </nav>
     <main>
         <h2>Szczegóły pracownika:</h2>
-        <from>
-            <label for="name" >Imię: *</label>
+         <form class="form">
+            <label for="name" >Imię: <span class="symbol-required">*</span></label>
             <input type="text" name="name" id="name" required value="Anroni" disabled/>
             <span id="errorName"></span>
           
-            <label for="surname" >Nazwisko: *</label>
+            <label for="surname" >Nazwisko: <span class="symbol-required">*</span></label>
             <input type="text" name="surname" id="surname" required value="luski" disabled/>
             <span id="errorSurname"></span>
 
-            <label for="email" >Email: *</label>
+            <label for="email" >Email: <span class="symbol-required">*</span></label>
             <input type="email" name="email" id="email" required value="antoana@anana.wo.pl" disabled/>
             <span id="errorEmail"></span>
 
-            <label for="password" >Password: *</label>
+            <label for="password" >Password: <span class="symbol-required">*</span></label>
             <input type="password" name="password" id="password" value="1234" required disabled/>
             <span id="errorPassword"></span>
 
-            <label for="active" >Active: *</label>
+            <label for="active" >Active: <span class="symbol-required">*</span></label>
             <input type="checkbox" name="active" id="active" required disabled checked/>
             <span id="errorActive"></span>
 
-            <p><a href="./form-edit.html">Edytuj</a></p>
+            <p><a href="./form-edit.html" class="list-actions-button-edit">Edytuj</a></p>
         </from>
 
         <h2>Szczegóły zadań:</h2>
 
-        <table>
+        <table class="table-list">
             <thead>
                 <tr>
                     <th>Nazwa</th>
@@ -79,7 +80,7 @@
             </tbody>
         </table>
 
-        <p><a href="./list.html">Powrót</a></p>
+        <p><a href="./list.html"class="list-actions-button-details">Powrót</a></p>
     </main>
 
     <footer>Marcin, Kulik, s22967</footer>

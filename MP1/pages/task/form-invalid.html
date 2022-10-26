@@ -5,55 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="../../css/style.css"/>
 
     <title>Task Manager</title>
 </head>
 <body>
     <header>
         <h1>Task Manager</h1>
-        <img src="../../images/logo.png" alt="Task Manager Logo" width="100"/>
+        <img src="../../images/logo.png" alt="Task Manager Logo" />
     </header>
     <nav>
         <ul>
             <li>
-                <a href="/index.html">Strona główna</a>
+                <a href="/MP1/index.html">Strona główna</a>
             </li>
             <li>
-                <a href="/pages/employee/list.html">Pracownicy</a>
+                <a href="/MP1/pages/employee/list.html">Pracownicy</a>
             </li>
             <li>
-                <a href="/pages/employeeTask/list.html">Zadania Pracownikow</a>
+                <a href="/MP1/pages/employeeTask/list.html">Zadania Pracownikow</a>
             </li>
             <li>
-                <a href="/pages/task/list.html">Zadania</a>
+                <a href="/MP1/pages/task/list.html" class="active">Zadania</a>
             </li>
         </ul>
     </nav>
     <main>
         <h2>Nowe zadanie:</h2>
-        <from>
+         <form class="form" >
             
           
-            <label for="title" >Tytuł: *</label>
-            <input type="text" name="title" id="surname" required/>
-            <span id="errorTitle">Pole jest wymagane<</span>
+            <label for="title" >Tytuł: <span class="symbol-required">*</span></label>
+            <input type="text" name="title" id="surname" class="error-input" required />
+            <span id="errorTitle" class="errors-text">Pole jest wymagane</span>
 
-            <label for="dueTo" >Data zakończenia: *</label>
-            <input type="date" name="dueTo" id="email" required/>
-            <span id="errorDueTo">Pole jest wymagane</span>
+            <label for="dueTo" >Data zakończenia: <span class="symbol-required">*</span></label>
+            <input type="date" name="dueTo" id="email" required class="error-input"/>
+            <span id="errorDueTo" class="errors-text">Pole jest wymagane</span>
 
-            <label for="createdAt" >Data Stworzenia: *</label>
-            <input type="date" name="createdAt" id="password" required/>
-            <span id="errorCreatedAt">Pole jest wymagane</span>
+            <label for="createdAt" >Data Stworzenia: <span class="symbol-required">*</span></label>
+            <input type="date" name="createdAt" id="password" required class="error-input"/>
+            <span id="errorCreatedAt" class="errors-text">Pole jest wymagane</span>
 
-            <label for="description" >Opis: *</label>
-            <input type="text" name="description" id="name" required />
-            <span id="errordescription">Pole jest wymagane</span>
+            <label for="description" >Opis: <span class="symbol-required">*</span></label>
+            <input type="text" name="description" id="name" required class="error-input"/>
+            <span id="errordescription" class="errors-text">Pole jest wymagane</span>
 
             <div>
-                <p id="errorSumary">Formularz zawiera błedy</p>
-                <input type="submit" value="Dodaj" />
-                <a href="./list.html">Anuluj</a>
+                <p id="errorSumary" class="errors-text">Formularz zawiera błedy</p>
+                <input type="submit" value="Dodaj" class="form-button-submit" />
+                <a href="./list.html" class="form-button-cancel">Anuluj</a>
             </div>
             
         </from>
