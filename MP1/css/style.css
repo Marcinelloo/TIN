@@ -3,8 +3,10 @@ html{
     font-family: sans-serif;
 }
 
+
 body{
-    min-width: 600px;
+    min-width: 360px;
+
 }
 
 header,
@@ -26,16 +28,11 @@ nav {
 }
 
 header {
-    overflow: auto;
+    display: flex;
+    justify-content: space-between;
 }
-
-header h1{
-    float: left;
-}
-
 header img {
     width: 100px;
-    float: right;
 }
 
 nav {
@@ -44,13 +41,9 @@ nav {
 
 
 nav ul{
-    padding: 0;
-    overflow: hidden;
-    list-style-type: none;
-}
-
-nav ul li {
-    float: left;
+ display: flex;
+ padding: 0;
+ list-style-type: none;
 }
 
 
@@ -195,6 +188,10 @@ main h2 {
     background-color: #2ecc71;
 }
 
+.form-buttons{
+    grid-column: 1 / span 2;
+}
+
 button,
 input,
 select,
@@ -212,8 +209,9 @@ textarea {
 }
 
 .form {
-    margin-left: 2rem;
-    width: 300px;
+   display: grid;
+   grid-template-columns: 150px 300px 1fr;
+   gap: 1rem;
 }
 
 
@@ -271,3 +269,62 @@ form select.error-input {
     color: #e74c3c;
 }
 
+@media all and (max-width: 720px) {
+    header {
+        flex-direction: column;
+    }
+    header h1 {
+        text-align: center;
+    }
+
+    header img {
+        align-self: center;
+    }
+    nav ul {
+        flex-wrap: wrap;
+    }
+    nav ul li {
+        flex-basis: 50%;
+        text-align: center;
+    }
+    nav ul li a { 
+        display: block;
+    }
+    .form {
+        grid-template-columns: 1fr;
+        row-gap: unset;
+        margin-left: unset;
+    }
+    .form-buttons {
+        grid-column: 1 / 1;
+    }
+
+    div table {
+        margin: 10px 0;
+    }
+
+    main div {
+        margin: 10px 0;
+        overflow-x: scroll;
+    }
+}
+
+
+
+@media all and (max-width: 400px) {
+    body,
+    nav,
+    nav ul,
+    header,
+    main,
+    footer {
+        margin: 0;
+    }
+
+    nav {
+        padding: 0;
+    }
+    nav ul li {
+        flex-basis: 100%;
+    }
+}
