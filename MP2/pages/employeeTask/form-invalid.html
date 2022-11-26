@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <script type="application/javascript" src="../../js/validationCommon.js"></script>
+
+    <title>Task Manager</title>
+</head>
+<body>
+    <header>
+        <h1>Task Manager</h1>
+        <img src="../../images/logo.png" alt="Task Manager Logo" />
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="/MP1/index.html">Strona główna</a>
+            </li>
+            <li>
+                <a href="/MP1/pages/employee/list.html">Pracownicy</a>
+            </li>
+            <li>
+                <a href="/MP1/pages/employeeTask/list.html" class="active">Zadania Pracownikow</a>
+            </li>
+            <li>
+                <a href="/MP1/pages/task/list.html">Zadania</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Nowe zadanie pracownika:</h2>
+        <form class="form">
+            <label for="employee" >Pracownik: <span class="symbol-required">*</span></label>
+            <select  name="employee" id="employee" required class="error-input">
+                <option>-- Wybierz pracownika --</option>
+                <option value="1">Andrzej</option>
+                <option value="2">Adam</option>
+                <option value="3">Marcin</option>
+           </select>
+            <span id="errorEmployee" class="errors-text">Pole jest wymagane</span>
+          
+            <label for="task" >Zadanie: <span class="symbol-required">*</span></label>
+            <select  name="task" id="task" required class="error-input">
+                <option>-- Wybierz zadanie --</option>
+                <option value="1">Zdjecie</option>
+                <option value="2">Chat</option>
+                <option value="3">Konkurs</option>
+           </select>
+            <span id="errorTask" class="errors-text">Pole jest wymagane</span>
+
+            <label for="status" >Status: <span class="symbol-required">*</span></label>
+            <input type="text" name="status" id="status" required class="error-input"/>
+            <span id="errorStatus" class="errors-text">Pole jest wymagane</span>
+
+            <label for="comment" >Comment: </label>
+            <input type="text" name="comment" id="comment" />
+
+            <div class="form-buttons">
+                <p id="errorSumary" class="errors-text">Formularz zawiera błedy</p>
+                <input type="submit" value="Dodaj" class="form-button-submit"/>
+                <a href="./list.html" class="form-button-cancel">Anuluj</a>
+            </div>
+            
+        </form>
+    </main>
+
+    <footer>Marcin, Kulik, s22967</footer>
+    
+</body>
+</html>

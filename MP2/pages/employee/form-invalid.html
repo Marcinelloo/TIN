@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <script type="application/javascript" src="../../js/validationCommon.js"></script>
+
+    <title>Task Manager</title>
+</head>
+<body>
+    <header>
+        <h1>Task Manager</h1>
+        <img src="../../images/logo.png" alt="Task Manager Logo" />
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="/MP1/index.html">Strona główna</a>
+            </li>
+            <li>
+                <a href="/MP1/pages/employee/list.html" class="active">Pracownicy</a>
+            </li>
+            <li>
+                <a href="/MP1/pages/employeeTask/list.html">Zadania Pracownikow</a>
+            </li>
+            <li>
+                <a href="/MP1/pages/task/list.html">Zadania</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Nowy pracownik:</h2>
+         <form class="form">
+            <label for="name" >Imię: <span class="symbol-required">*</span></label>
+            <input type="text" name="name" id="name" required class="error-input"/>
+            <span id="errorName" class="errors-text">Pole jest wymagane</span>
+          
+            <label for="name" >Nazwisko: <span class="symbol-required">*</span></label>
+            <input type="text" name="surname" id="surname" required class="error-input"/>
+            <span id="errorSurname" class="errors-text">Pole jest wymagane</span>
+
+            <label for="name" >Email: <span class="symbol-required">*</span></label>
+            <input type="email" name="email" id="email" required class="error-input"/>
+            <span id="errorEmail" class="errors-text">Pole jest wymagane</span>
+
+            <label for="name" >Password: <span class="symbol-required">*</span></label>
+            <input type="password" name="password" id="password" required class="error-input"/>
+            <span id="errorPassword" class="errors-text">Pole jest wymagane</span>
+
+            <label for="name" >Active: <span class="symbol-required">*</span></label>
+            <input type="checkbox" name="active" id="active" required class="error-input"/>
+            <span id="errorActive" class="errors-text">Pole jest wymagane</span>
+
+            <div class="form-buttons">
+                <p id="errorSumary" class="errors-text">Formularz zawiera błedy</p>
+                <input type="submit" value="Dodaj" class="form-button-submit" />
+                <a href="./list.html" class="form-button-cancel">Anuluj</a>
+            </div>
+            
+        </form>
+    </main>
+
+    <footer>Marcin, Kulik, s22967</footer>
+    
+</body>
+</html>

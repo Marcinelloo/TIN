@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <script type="application/javascript"  src="../../js/validationCommon.js" ></script>
+    <title>Task Manager</title>
+</head>
+<body>
+    <header>
+        <h1>Task Manager</h1>
+        <img src="../../images/logo.png" alt="Task Manager Logo" />
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="/MP1/index.html">Strona główna</a>
+            </li>
+            <li>
+                <a href="/MP1/pages/employee/list.html">Pracownicy</a>
+            </li>
+            <li>
+                <a href="/MP1/pages/employeeTask/list.html">Zadania Pracownikow</a>
+            </li>
+            <li>
+                <a href="/MP1/pages/task/list.html" class="active">Zadania</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Nowe zadanie:</h2>
+        <form class="form">
+            <label for="title" >Tytuł: <span class="symbol-required">*</span></label>
+            <input type="text" name="title" id="surname" required />
+            <span id="errorTitle"></span>
+
+            <label for="dueTo" >Data zakończenia: <span class="symbol-required">*</span></label>
+            <input type="date" name="dueTo" id="email" required/>
+            <span id="errorDueTo"></span>
+
+            <label for="createdAt" >Data Stworzenia: <span class="symbol-required">*</span></label>
+            <input type="date" name="createdAt" id="password" required/>
+            <span id="errorCreatedAt"></span>
+
+            <label for="description" >Opis: <span class="symbol-required">*</span></label>
+            <input type="text" name="description" id="name" required />
+            <span id="errordescription"></span>
+
+        <div class="form-buttons">
+            <p id="errorSumary" class="errors-text"></p>
+            <input type="submit" value="Dodaj" class="form-button-submit" />
+            <a href="./list.html" class="form-button-cancel">Anuluj</a>
+        </div>
+            
+        </form>
+    </main>
+
+    <footer>Marcin, Kulik, s22967</footer>
+    
+</body>
+</html>
