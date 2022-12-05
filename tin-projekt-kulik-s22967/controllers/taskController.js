@@ -70,22 +70,28 @@ exports.addTask = (req, res, next) => {
 
 exports.updateTask = (req, res, next) => {
   const taskId = req.body._id;
-  const taskData = { ...req.body };
+  let taskData = { ...req.body };
 
   TaskRepository.updateTask(taskId, taskData)
     .then((result) => {
       res.redirect("/tasks");
     })
     .catch((err) => {
-      res.render("pages/task/form", {
-        task: taskId,
-        navLocation: "employee",
-        pageTitle: "Edycja pracownika",
-        formMode: "edit",
-        btnLabel: "Edytuj zadanie",
-        formAction: "/tasks/edit",
-        validationErrors: err.errors,
-      });
+
+      TaskRepository.getTaskById(taskId).then(task => {
+        taskData.employeetask = task.employeetask;
+
+        res.render("pages/task/form", {
+          task: taskData,
+          navLocation: "employee",
+          pageTitle: "Edycja pracownika",
+          formMode: "edit",
+          btnLabel: "Edytuj zadanie",
+          formAction: "/tasks/edit",
+          validationErrors: err.errors,
+        });
+      }) 
+      
     });
 };
 exports.deleteTask = (req, res, next) => {

@@ -11,41 +11,37 @@
 
             <label for="title" >Tytuł: <span class="symbol-required">*</span></label>
             <input type="text" name="title" id="title" required value="<%- task.title -%> " <%- (formMode === 'showDetails') ? 'disabled' : '' -%>
-            class="<% validationErrors.find( e => e.path.includes('title') ? 'error-input' : '' %> "/>
-            />
+            class="<%- validationErrors.find( e => e.path.includes('title')) ? 'error-input' : '' -%> "/>
             <span id="errorTitle">
-                <% if (validationErrors.find( e => e.path.includes('title')){ %> 
-                    <%- validationErrors.find( e => e.path.includes('title').message -%>
+                <% if (validationErrors.find( e => e.path.includes('title'))){ %> 
+                    <%- validationErrors.find( e => e.path.includes('title')).message -%>
                 <% } %>  
             </span>
 
             <label for="dueTo" >Data zakończenia: <span class="symbol-required">*</span></label>
             <input type="date" name="dueTo" id="dueTo" required   <%- (formMode === 'showDetails') ? 'disabled' : '' -%>
-            class="<% validationErrors.find( e => e.path.includes('dueTo') ? 'error-input' : '' %> "/>
-            />
+            class="<%- validationErrors.find( e => e.path.includes('dueTo')) ? 'error-input' : '' -%> "/>
             <span id="errorDueTo">
-                <% if (validationErrors.find( e => e.path.includes('dueTo')){ %> 
-                    <%- validationErrors.find( e => e.path.includes('dueTo').message -%>
+                <% if (validationErrors.find( e => e.path.includes('dueTo'))){ %> 
+                    <%- validationErrors.find( e => e.path.includes('dueTo')).message -%>
                 <% } %>  
             </span>
 
             <label for="created" >Data Stworzenia: <span class="symbol-required">*</span></label>
             <input type="date" name="created" id="created" required  <%- (formMode === 'showDetails') ? 'disabled' : '' -%>
-            class="<% validationErrors.find( e => e.path.includes('created') ? 'error-input' : '' %> "/>
-            />
+            class="<%- validationErrors.find( e => e.path.includes('created')) ? 'error-input' : '' -%> "/>
             <span id="errorCreatedAt">
-                <% if (validationErrors.find( e => e.path.includes('created')){ %> 
-                    <%- validationErrors.find( e => e.path.includes('created').message -%>
+                <% if (validationErrors.find( e => e.path.includes('created'))){ %> 
+                    <%- validationErrors.find( e => e.path.includes('created')).message -%>
                 <% } %>  
             </span>
 
             <label for="description" >Opis: <span class="symbol-required">*</span></label>
             <input type="text" name="description" id="description" required value="<%- task.description -%> " <%- (formMode === 'showDetails') ? 'disabled' : '' -%>
-            class="<% validationErrors.find( e => e.path.includes('description') ? 'error-input' : '' %> "/>
-            />
+            class="<%- validationErrors.find( e => e.path.includes('description')) ? 'error-input' : '' -%> "/>
             <span id="errordescription">
-                <% if (validationErrors.find( e => e.path.includes('description')){ %> 
-                    <%- validationErrors.find( e => e.path.includes('description').message -%>
+                <% if (validationErrors.find( e => e.path.includes('description'))){ %> 
+                    <%- validationErrors.find( e => e.path.includes('description')).message -%>
                 <% } %>  
             </span>
 

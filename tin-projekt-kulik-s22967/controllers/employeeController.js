@@ -56,7 +56,7 @@ exports.addEmployee = (req, res, next) => {
     })
     .catch((err) => {
       res.render("pages/employee/form", {
-        emp: {},
+        emp: empData,
         navLocation: "employee",
         pageTitle: "Nowy pracownik",
         formMode: "createNew",
@@ -69,22 +69,26 @@ exports.addEmployee = (req, res, next) => {
 
 exports.updateEmployee = (req, res, next) => {
   const empId = req.body._id;
-  const empData = { ...req.body };
+  let empData = { ...req.body };
 
   EmployeeRepository.updateEmployee(empId, empData)
     .then((result) => {
       res.redirect("/employees");
     })
     .catch((err) => {
-      res.render("pages/employee/form", {
-        emp: empData,
-        navLocation: "employee",
-        pageTitle: "Edycja pracownika",
-        formMode: "edit",
-        btnLabel: "Edytuj pracownika",
-        formAction: "/employees/edit",
-        validationErrors: err.errors,
-      });
+      EmployeeRepository.getEmployeeById(empId).then((view) => {
+        empData.employeetask = view.employeetask;
+
+        res.render("pages/employee/form", {
+          emp: empData,
+          navLocation: "employee",
+          pageTitle: "Edycja pracownika",
+          formMode: "edit",
+          btnLabel: "Edytuj pracownika",
+          formAction: "/employees/edit",
+          validationErrors: err.errors,
+        });
+      })
     });
 };
 exports.deleteEmployee = (req, res, next) => {

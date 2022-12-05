@@ -89,6 +89,7 @@ exports.showEmployeeTaskDetails = (req, res, next) => {
 
 exports.addEmployeeTask = (req, res, next) => {
   const empTaskData = { ...req.body };
+  console.log(empTaskData)
 
   EmployeeTaskRepository.createEmployeeTask(empTaskData)
     .then((result) => {
@@ -112,7 +113,7 @@ exports.addEmployeeTask = (req, res, next) => {
             formMode: "createNew",
             btnLabel: "Dodaj zadanie pracownika",
             formAction: "/employees-tasks/add",
-            validationErrors: [],
+            validationErrors: err.errors,
           });
         });
     });
@@ -121,6 +122,8 @@ exports.addEmployeeTask = (req, res, next) => {
 exports.updateEmployeeTask = (req, res, next) => {
   const empTaskId = req.body._id;
   const empTaskData = { ...req.body };
+
+  console.log(empTaskData)
 
   EmployeeTaskRepository.updateEmployeeTask(empTaskId, empTaskData)
     .then((result) => {
@@ -135,6 +138,7 @@ exports.updateEmployeeTask = (req, res, next) => {
           return TaskRepository.getTasks();
         })
         .then((tasks) => {
+
           res.render("pages/employeeTask/form", {
             empTask: empTaskData,
             allTasks: tasks,

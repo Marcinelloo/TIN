@@ -9,58 +9,52 @@
             <input type="hidden" name="_id" value="<%- emp._id -%>">
 
             <label for="firstName" >Imię: <span class="symbol-required">*</span></label>
-            <input type="text" name="firstName" id="firstName" required value="<%- emp.firstName -%> " placeholder="3-60 znaków" <%- (formMode === 'showDetails') ? 'disabled' : '' -%> 
-                class="<% validationErrors.find( e => e.path.includes('firstName') ? 'error-input' : '' %> "
-            />
+            <input class="<%- validationErrors.find( e => e.path.includes('firstName')) ? 'error-input' : '' -%> " type="text" name="firstName" id="firstName" required value="<%- emp.firstName -%> " placeholder="3-60 znaków" <%- (formMode === 'showDetails') ? 'disabled' : '' -%>   />
             <span id="errorFirstName">
-                <% if (validationErrors.find( e => e.path.includes('firstName')){ %> 
-                    <%- validationErrors.find( e => e.path.includes('firstName').message -%>
+                <% if (validationErrors.find( e => e.path.includes('firstName'))){ %> 
+                    <%- validationErrors.find( e => e.path.includes('firstName')).message -%>
                 <% } %>  
             </span>
           
             <label for="lastName" >Nazwisko: <span class="symbol-required">*</span></label>
             <input type="text" name="lastName" id="lastName" required value="<%- emp.lastName -%>" placeholder="3-60 znaków" <%- (formMode === 'showDetails') ? 'disabled' : '' -%>
-            class="<% validationErrors.find( e => e.path.includes('lastName') ? 'error-input' : '' %> "
-            
-            />
+            class="<%- validationErrors.find( e => e.path.includes('lastName')) ? 'error-input' : '' -%> "  />
             <span id="errorSurname">
-                <% if (validationErrors.find( e => e.path.includes('lastName')){ %> 
-                    <%- validationErrors.find( e => e.path.includes('lastName').message -%>
+                <% if (validationErrors.find( e => e.path.includes('lastName'))){ %> 
+                    <%- validationErrors.find( e => e.path.includes('lastName')).message -%>
                 <% } %>  
             </span>
 
             <label for="email" >Email: <span class="symbol-required">*</span></label>
             <input type="email" name="email" id="email" required value="<%- emp.email -%>" placeholder="np admin@admin.eu" <%- (formMode === 'showDetails') ? 'disabled' : '' -%>
-            class="<% validationErrors.find( e => e.path.includes('email') ? 'error-input' : '' %> "
+            class="<%- validationErrors.find( e => e.path.includes('email')) ? 'error-input' : '' -%> "
             />
             <span id="errorEmail">
-                <% if (validationErrors.find( e => e.path.includes('email')){ %> 
-                    <%- validationErrors.find( e => e.path.includes('email').message -%>
+                <% if (validationErrors.find( e => e.path.includes('email'))){ %> 
+                    <%- validationErrors.find( e => e.path.includes('email')).message == 'email must be unique'? "Podany adres email jest juz używany" : validationErrors.find( e => e.path.includes('email')).message -%>
                 <% } %>  
             </span>
 
             <label for="password" >Password: <span class="symbol-required">*</span></label>
             <input type="password" name="password" id="password" value="<%- emp.password -%>" required placeholder="10-60 znaków" <%- (formMode === 'showDetails') ? 'disabled' : '' -%>
-            class="<% validationErrors.find( e => e.path.includes('password') ? 'error-input' : '' %> "
+            class="<%- validationErrors.find( e => e.path.includes('password')) ? 'error-input' : '' -%> "
             
             />
             <span id="errorPassword">
-                <% if (validationErrors.find( e => e.path.includes('password')){ %> 
-                    <%- validationErrors.find( e => e.path.includes('password').message -%>
+                <% if (validationErrors.find( e => e.path.includes('password'))){ %> 
+                    <%- validationErrors.find( e => e.path.includes('password')).message -%>
                 <% } %>  
             </span>
 
             <label for="active" >Active: <span class="symbol-required">*</span></label>
             <input type="checkbox" name="active" id="active" checked="<%- emp.active -%>" required <%- (formMode === 'showDetails') ? 'disabled' : '' -%>
-            class="<% validationErrors.find( e => e.path.includes('active') ? 'error-input' : '' %> "
+            class="<%- validationErrors.find( e => e.path.includes('active')) ? 'error-input' : '' -%> "
             />
             <span id="errorActive">
-                <% if (validationErrors.find( e => e.path.includes('active')){ %> 
-                    <%- validationErrors.find( e => e.path.includes('active').message -%>
+                <% if (validationErrors.find( e => e.path.includes('active'))){ %> 
+                    <%- validationErrors.find( e => e.path.includes('active')).message -%>
                 <% } %>  
             </span>
-
-           
            
 
             <% if(formMode == 'showDetails') { %> 
