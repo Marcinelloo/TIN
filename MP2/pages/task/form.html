@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="../../css/style.css"/>
-    <script type="application/javascript"  src="../../js/validationCommon.js" ></script>
+    <script type="application/javascript"  src="../../js/validationTaskForm.js" ></script>
     <title>Task Manager</title>
 </head>
 <body>
@@ -17,36 +17,36 @@
     <nav>
         <ul>
             <li>
-                <a href="/MP1/index.html">Strona główna</a>
+                <a href="/MP2/index.html">Strona główna</a>
             </li>
             <li>
-                <a href="/MP1/pages/employee/list.html">Pracownicy</a>
+                <a href="/MP2/pages/employee/list.html">Pracownicy</a>
             </li>
             <li>
-                <a href="/MP1/pages/employeeTask/list.html">Zadania Pracownikow</a>
+                <a href="/MP2/pages/employeeTask/list.html">Zadania Pracownikow</a>
             </li>
             <li>
-                <a href="/MP1/pages/task/list.html" class="active">Zadania</a>
+                <a href="/MP2/pages/task/list.html" class="active">Zadania</a>
             </li>
         </ul>
     </nav>
     <main>
         <h2>Nowe zadanie:</h2>
-        <form class="form">
+        <form class="form" novalidate onsubmit="return validationForm();">
             <label for="title" >Tytuł: <span class="symbol-required">*</span></label>
-            <input type="text" name="title" id="surname" required />
+            <input type="text" name="title" id="title" required />
             <span id="errorTitle"></span>
 
             <label for="dueTo" >Data zakończenia: <span class="symbol-required">*</span></label>
-            <input type="date" name="dueTo" id="email" required/>
+            <input type="date" name="dueTo" id="dueTo" required/>
             <span id="errorDueTo"></span>
 
             <label for="createdAt" >Data Stworzenia: <span class="symbol-required">*</span></label>
-            <input type="date" name="createdAt" id="password" required/>
+            <input type="date" name="createdAt" id="createdAt" required/>
             <span id="errorCreatedAt"></span>
 
             <label for="description" >Opis: <span class="symbol-required">*</span></label>
-            <input type="text" name="description" id="name" required />
+            <input type="text" name="description" id="description" required />
             <span id="errordescription"></span>
 
         <div class="form-buttons">

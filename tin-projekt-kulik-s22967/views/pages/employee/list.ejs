@@ -1,0 +1,43 @@
+<%- include('../../fragments/header.ejs') -%>
+
+
+    <main >
+        <h2>Lista pracowników:</h2>
+        <div>
+        <table class="table-list" > 
+            <thead>
+                <tr>
+                    <th>Imie</th>
+                    <th>Nazwisko</th>
+                    <th>E-mail</th>
+                    <th>Akcje</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (let emp of emps) { %>
+                <tr>
+                    <td><%- emp.firstName -%></td>
+                    <td><%- emp.lastName -%></td>
+                    <td><%- emp.email -%></td>
+                    <td>
+                        <ul class="list-actions">
+                            <li>
+                                <a href="/employees/details/<%- emp._id -%> " class="list-actions-button-details">Szczegóły</a>
+                            </li>
+                            <li>
+                                <a href="/employees/edit/<%- emp._id -%>" class="list-actions-button-edit">Edytuj</a>
+                            </li>
+                            <li>
+                                <a href="/employees/delete/<%- emp._id -%>" class="list-actions-button-delete">Usuń</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <% } %> 
+            </tbody>
+        </table>
+        </div>
+        <p><a href="/employees/add" class="button-add">Dodaj nowego pracownika</a></p>
+    </main>
+
+    <%- include('../../fragments/footer.ejs') -%>

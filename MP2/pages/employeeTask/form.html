@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="../../css/style.css"/>
-    <script type="application/javascript" src="../../js/validationCommon.js"></script>
+    <script type="application/javascript" src="../../js/validationEmployeeTaskForm.js"></script>
 
     <title>Task Manager</title>
 </head>
@@ -18,22 +18,22 @@
     <nav>
         <ul>
             <li>
-                <a href="/MP1/index.html">Strona główna</a>
+                <a href="/MP2/index.html">Strona główna</a>
             </li>
             <li>
-                <a href="/MP1/pages/employee/list.html">Pracownicy</a>
+                <a href="/MP2/pages/employee/list.html">Pracownicy</a>
             </li>
             <li>
-                <a href="/MP1/pages/employeeTask/list.html" class="active">Zadania Pracownikow</a>
+                <a href="/MP2/pages/employeeTask/list.html" class="active">Zadania Pracownikow</a>
             </li>
             <li>
-                <a href="/MP1/pages/task/list.html">Zadania</a>
+                <a href="/MP2/pages/task/list.html">Zadania</a>
             </li>
         </ul>
     </nav>
     <main>
         <h2>Nowe zadanie pracownika:</h2>
-         <form class="form">
+         <form class="form" novalidate onsubmit="return validationForm()">
             <label for="employee" >Pracownik: <span class="symbol-required">*</span></label>
             <select  name="employee" id="employee" required >
                 <option>-- Wybierz pracownika --</option>
@@ -58,6 +58,8 @@
 
             <label for="comment" >Comment: </label>
             <input type="text" name="comment" id="comment" />
+            <span id="errorComment"></span>
+
 
             <div class="form-buttons">
                 <p id="errorSumary"></p>

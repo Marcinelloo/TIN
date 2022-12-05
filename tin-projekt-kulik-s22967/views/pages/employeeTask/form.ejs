@@ -1,0 +1,78 @@
+<%- include('../../fragments/header.ejs') -%>
+
+
+    <main>
+        <script type="application/javascript" src="/js/validationEmployeeTaskForm.js"></script>
+
+        <h2><%- pageTitle -%></h2>
+         <form class="form" method="post" action="<%- formAction -%> " novalidate>
+            <input type="hidden" name="_id" value="<%- empTask._id -%>">
+            
+            <label for="emp_id" >Pracownik: <span class="symbol-required">*</span></label>
+            <select  name="emp_id" id="emp_id" required   <%- (formMode === 'showDetails') ? 'disabled' : '' -%>
+                class="<% validationErrors.find( e => e.path.includes('emp_id') ? 'error-input' : '' %> "
+                >
+                <option  value="" >-- Wybierz pracownika --</option>
+                <% for (let i=0; i < allEmps.length; i++) { let emp = allEmps[i]; %>
+                    <option  value="<%- emp._id -%>" label="<%- emp.firstName +  ' ' + emp.lastName -%>" <%- (empTask._id && emp._id.toString() == empTask.employee._id.toString()) ? 'selected' : '' -%>   > </option>
+                <% } %>
+           </select>
+            <span id="errorEmployee">
+                <% if (validationErrors.find( e => e.path.includes('emp_id')){ %> 
+                    <%- validationErrors.find( e => e.path.includes('emp_id').message -%>
+                <% } %>  
+            </span>
+            <label for="tsk_id" >Zadanie: <span class="symbol-required">*</span></label>
+            <select  name="tsk_id" id="tsk_id" required  <%- (formMode === 'showDetails') ? 'disabled' : '' -%>
+                class="<% validationErrors.find( e => e.path.includes('tsk_id') ? 'error-input' : '' %> "
+                >
+                <option>-- Wybierz zadanie --</option>
+                <% for (let i=0; i < allTasks.length; i++) { let task = allTasks[i]; %>
+                    <option value="<%- task._id -%>" label="<%- task.title -%>"
+                        <%- (empTask._id && task._id.toString() == empTask.tasks._id.toString()) ? 'selected' : '' -%> >
+                    </option>
+                <% } %>
+           </select>
+            <span id="errorTask">
+                <% if (validationErrors.find( e => e.path.includes('tsk_id')){ %> 
+                    <%- validationErrors.find( e => e.path.includes('tsk_id').message -%>
+                <% } %>  
+            </span>
+
+            <label for="status" >Status: <span class="symbol-required">*</span></label>
+            <input type="text" name="status" id="status" value="<%- empTask.status -%>" required <%- (formMode === 'showDetails') ? 'disabled' : '' -%>
+            class="<% validationErrors.find( e => e.path.includes('status') ? 'error-input' : '' %> "
+            />
+            <span id="errorStatus">
+                <% if (validationErrors.find( e => e.path.includes('status')){ %> 
+                    <%- validationErrors.find( e => e.path.includes('status').message -%>
+                <% } %>  
+            </span>
+
+            <label for="comment" >Comment: </label>
+            <input type="text" name="comment" id="comment" value="<%- empTask.comment -%> " <%- (formMode === 'showDetails') ? 'disabled' : '' -%>
+            class="<% validationErrors.find( e => e.path.includes('comment') ? 'error-input' : '' %> "/>
+            <span id="errorComment">
+                <% if (validationErrors.find( e => e.path.includes('comment')){ %> 
+                    <%- validationErrors.find( e => e.path.includes('comment').message -%>
+                <% } %>  
+            </span>
+
+            <% if(formMode == 'showDetails') { %> 
+                <div class="section-buttons">
+                    <a href="/employees-tasks/edit/<%- empTask._id -%>"  class="list-actions-button-edit" >Edytuj</a>
+                </div>
+            <% } %> 
+            <div class="form-buttons">
+                    <p id="errorSumary"></p>
+            <% if(formMode != 'showDetails') { %> 
+                <input type="submit" value="<%- btnLabel -%>" class="form-button-submit" />
+                <a href="/employees-tasks" class="form-button-cancel">Anuluj</a>
+            <% } else { %> 
+                <p><a href="/employees-tasks"class="list-actions-button-details">Powrót</a></p>
+            <% } %> 
+
+        </form>
+    </main>
+
+    <%- include('../../fragments/footer.ejs') -%>
