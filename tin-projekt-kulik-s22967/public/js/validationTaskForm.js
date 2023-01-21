@@ -54,17 +54,7 @@ function checkEmail(value) {
 }
 
 function getFormatedDate(inputDate) {
-  const date = new Date(inputDate);
-  let day = date.getDay() + 1 + "";
-  let month = date.getMonth() + "";
-  let year = date.getFullYear();
-
-  month = month.length < 2 ? "0" + month : month;
-  day = day.length < 2 ? "0" + day : day;
-
-  const todayFormated = [year, month, day].join("-");
-
-  return todayFormated;
+  return new Date(inputDate).toISOString().split('T')[0]
 }
 
 function checkDate(value) {

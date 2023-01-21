@@ -37,6 +37,7 @@ const Task = sequelize.define("Task", {
       notEmpty: {
         msg: "Pole jest wymagane",
       },
+      
     },
   },
   description: {

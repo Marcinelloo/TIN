@@ -24,7 +24,7 @@ exports.showEditTaskFrom = (req, res, next) => {
   TaskRepository.getTaskById(taskId).then((taskId) => {
     res.render("pages/task/form", {
       task: taskId,
-      navLocation: "employee",
+      navLocation: "task",
       pageTitle: "Edycja pracownika",
       formMode: "edit",
       btnLabel: "Edytuj zadanie",
