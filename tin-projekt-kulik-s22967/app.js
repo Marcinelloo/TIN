@@ -1,8 +1,10 @@
 var createError = require("http-errors");
+var bodyParser = require("body-parser");
 var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
+var cors = require("cors");
 const sequelizeInit = require("./config/sequelize/init");
 
 sequelizeInit().catch((err) => {
@@ -18,7 +20,9 @@ const empTaskApiRouter = require("./routes/api/employeeTaskApiRouter");
 const taskApiRouter = require("./routes/api/taskApiRouter");
 
 var app = express();
-
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(cors());
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");

@@ -11,9 +11,9 @@ exports.getEmployeesTasks = (req, res, next) => {
 };
 
 exports.getEmployeeTaskById = (req, res, next) => {
-  const employeeTaskId = req.param.employeeTaskId;
+  const employeeTaskId = req.params.employeeTaskId;
 
-  EmployeeTaskRepostiory.getTaskById(employeeTaskId)
+  EmployeeTaskRepostiory.getEmployeeTaskById(employeeTaskId)
     .then((emp) => {
       if (!emp) {
         res.status(404).json({
@@ -60,7 +60,7 @@ exports.updateEmployeeTask = (req, res, next) => {
 };
 
 exports.deleteEmployeeTask = (req, res, next) => {
-  const employeeTaskId = req.param.employeeTaskId;
+  const employeeTaskId = req.params.employeeTaskId;
 
   EmployeeTaskRepostiory.deleteEmployeeTask(employeeTaskId)
     .then((result) => {

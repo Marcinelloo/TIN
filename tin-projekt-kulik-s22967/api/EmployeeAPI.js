@@ -11,9 +11,9 @@ exports.getEmployees = (req, res, next) => {
 };
 
 exports.getEmployeeById = (req, res, next) => {
-  const empId = req.param.empId;
+  const empId = req.params.empId;
 
-  EmployeeeRepository.getEmployeeByOd(empId)
+  EmployeeeRepository.getEmployeeById(empId)
     .then((emp) => {
       if (!emp) {
         res.status(404).json({
@@ -28,7 +28,7 @@ exports.getEmployeeById = (req, res, next) => {
 
 exports.createEmployee = (req, res, next) => {
   const body = req.body;
-
+  console.log(req);
   EmployeeeRepository.createEmployee(body)
     .then((result) => {
       res.status(201).json(result);
@@ -43,13 +43,15 @@ exports.createEmployee = (req, res, next) => {
 
 exports.updateEmployee = (req, res, next) => {
   const body = req.body;
-  const empId = req.param.empId;
+  const empId = req.params.empId;
+  console.log(body);
 
   EmployeeeRepository.updateEmployee(empId, body)
     .then((result) => {
       res.status(200).json({ message: "Employee updated!", emp: result });
     })
     .catch((err) => {
+      console.log(err);
       if (!err.statusCode) {
         err.statusCode = 500;
       }
@@ -58,7 +60,7 @@ exports.updateEmployee = (req, res, next) => {
 };
 
 exports.deleteEmployee = (req, res, next) => {
-  const empId = req.param.empId;
+  const empId = req.params.empId;
 
   EmployeeeRepository.deleteEmployee(empId)
     .then((result) => {

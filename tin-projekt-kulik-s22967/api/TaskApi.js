@@ -1,7 +1,7 @@
 const TaskRepository = require("../repository/sequelize/TaskRepository");
 
 exports.getTask = (req, res, next) => {
-  TaskRepository.getEmployees()
+  TaskRepository.getTasks()
     .then((emps) => {
       res.status(200).json(emps);
     })
@@ -11,7 +11,7 @@ exports.getTask = (req, res, next) => {
 };
 
 exports.getTaskById = (req, res, next) => {
-  const taskId = req.param.taskId;
+  const taskId = req.params.taskId;
 
   TaskRepository.getTaskById(taskId)
     .then((emp) => {
@@ -43,9 +43,9 @@ exports.createTask = (req, res, next) => {
 
 exports.updateTask = (req, res, next) => {
   const body = req.body;
-  const taskId = req.param.taskId;
+  const taskId = req.params.taskId;
 
-  TaskRepository.updateTask(empId, body)
+  TaskRepository.updateTask(taskId, body)
     .then((result) => {
       res.status(200).json({ message: "Task updated!", task: result });
     })
@@ -58,7 +58,7 @@ exports.updateTask = (req, res, next) => {
 };
 
 exports.deleteTask = (req, res, next) => {
-  const taskId = req.param.taskId;
+  const taskId = req.params.taskId;
 
   TaskRepository.deleteTask(taskId)
     .then((result) => {
