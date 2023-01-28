@@ -1,0 +1,169 @@
+{
+  "main-page": {
+    "content": "Strona główna",
+    "description": "Lorem ipsum dolor sit amet..."
+  },
+  "nav": {
+    "main-page": "Strona główna",
+    "employees": "Pracownicy",
+    "employeeTasks": "Zadania Pracownikow",
+    "tasks": "Zadania"
+  },
+  "list": {
+    "title": {
+      "employees": "Lista  pracownikow",
+      "employeeTasks": "Lista zadan pracownikow ",
+      "tasks": "Lista zadan"
+    },
+    "actions": {
+      "title": "Akcje",
+      "details": "Szczegóły",
+      "edit": "Edytuj",
+      "delete": "Usuń",
+      "add": {
+        "employees": "Dodaj nowego pracownika",
+        "employeeTasks": "Dodaj nowe zadanie pracownika",
+        "tasks": "Dodaj nowe zadanie"
+      }
+    },
+    "table-fields": {
+      "employees": {
+        "field_1": "Imię",
+        "field_2": "Nazwisko",
+        "field_3": "E-mail"
+      },
+      "employeeTasks": {
+        "field_1": "Imie",
+        "field_2": "Nazwisko",
+        "field_3": "Nazwa zadania"
+      },
+      "tasks": {
+        "field_1": "Tytuł",
+        "field_2": "Data sworzenia",
+        "field_3": "Data zakończenia",
+        "field_4": "Opis"
+      }
+    }
+  },
+  "details": {
+    "employees": {
+      "title": "Informacje o pracowniku",
+      "title_2": "Szczegóły zadan",
+      "field_1": "Imię",
+      "field_2": "Nazwisko",
+      "field_3": "E-mail",
+      "field_4": "Aktywny",
+      "field_5": "Hasło"
+    },
+    "employeeTasks": {
+      "title": "Informacje o zadaniu pracownika",
+      "field_1": "Imie",
+      "field_2": "Nazwisko",
+      "field_3": "Nazwa zadania"
+    },
+    "tasks": {
+      "title": "Informacje o zadaniu",
+      "title_2": "Szczegóły innych zadan praconiwka",
+      "field_1": "Tytuł",
+      "field_2": "Data sworzenia",
+      "field_3": "Data zakończenia",
+      "field_4": "Opis"
+    },
+    "actions": {
+      "return": "Powrót",
+      "add": "Dodaj",
+      "edit": "Edytuj",
+      "cancel": "Anuluj"
+    },
+    "errors": {
+      "error_0": "Formularz zawiera bledy",
+      "error_1": "Pole jest wymagane.",
+      "error_2": "Pole powinno zawierać od 5 do 60 znaków."
+    }
+  },
+  "form": {
+    "auth": {
+      "logout": "Logout",
+      "login": "Login"
+    },
+    "employees": {
+      "title_add": "Nowy pracownik",
+      "title_edit": "Edytuj pracownika",
+      "field_1": "Imię",
+      "field_2": "Nazwisko",
+      "field_3": "E-mail"
+    },
+    "employeeTasks": {
+      "title_add": "Nowe zadanie pracownika",
+      "title_edit": "Edytuj zadanie pracownika",
+      "field_1": "Imie",
+      "field_2": "Nazwisko",
+      "field_3": "Nazwa zadania"
+    },
+    "tasks": {
+      "title_add": "Nowe zadanie",
+      "title_edit": "Edytuj zadanie",
+      "field_1": "Tytuł",
+      "field_2": "Data sworzenia",
+      "field_3": "Data zakończenia",
+      "field_4": "Opis"
+    },
+    "actions": {
+      "return": "Powrót",
+      "add": "Dodaj",
+      "edit": "Edytuj",
+      "cancel": "Anuluj"
+    },
+    "errors": {
+      "error_0": "Formularz zawiera bledy",
+      "error_1": "Pole jest wymagane.",
+      "error_2": "Pole powinno zawierać od 5 do 60 znaków."
+    }
+  },
+  "emp": {
+    "fields": {
+      "firstName": "Imię",
+      "lastName": "Nazwisko",
+      "email": "Email"
+    },
+    "list": {
+      "title": "Pracownicy",
+      "addNew": "Dodaj nowego pracownika",
+      "noData": "Brak pracowników w bazie",
+      "pageTitle": "Lista pracowników"
+    },
+    "form": {
+      "employment": "Historia zatrudnienia",
+      "add": {
+        "pageTitle": "Dodawanie pracownika",
+        "btnLabel": "Dodaj pracownika",
+        "confirm": {
+          "header": "Potwierdzenie operacji",
+          "text": "Pomyślnie dodano pracownika"
+        }
+      },
+      "edit": {
+        "pageTitle": "Edycja pracownika",
+        "btnLabel": "Zapisz zmiany",
+        "confirm": {
+          "header": "Potwierdzenie operacji",
+          "text": "Pomyślnie zaktualizowano pracownika"
+        }
+      }
+    }
+  },
+  "auth": {
+    "login": "Zaloguj sie",
+    "logout": "Wyloguj",
+    "title": "Logowanie"
+  },
+  "validation": {
+    "messages": {
+      "notEmpty": "Pole jest wymagane",
+      "len_2_60": "Pole powinno zawierać od 2 do 60 znaków",
+      "len_5_60": "Pole powinno zawierać od 5 do 60 znaków",
+      "isEmail": "Pole powinno zawierać prawidłowy adres email",
+      "formErrors": "Formularz zawiera błędy"
+    }
+  }
+}

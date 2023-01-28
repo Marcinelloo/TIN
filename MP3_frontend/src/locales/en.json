@@ -1,0 +1,173 @@
+{
+  "main-page": {
+    "content": "Main Page",
+    "description": "Lorem ipsum dolor sit amet..."
+  },
+  "nav": {
+    "main-page": "Main page",
+    "employees": "Employees",
+    "employeeTasks": "Employees tasks",
+    "tasks": "Tasks"
+  },
+  "list": {
+    "title": {
+      "employees": "Employee list",
+      "employeeTasks": "Employee tasks list ",
+      "tasks": "Tasks list"
+    },
+    "table-fields": {
+      "employees": {
+        "field_1": "Name",
+        "field_2": "Surname",
+        "field_3": "E-mail"
+      },
+      "employeeTasks": {
+        "field_1": "Name",
+        "field_2": "Surname",
+        "field_3": "Task name"
+      },
+      "tasks": {
+        "field_1": "Title",
+        "field_2": "Created at",
+        "field_3": "Ended at",
+        "field_4": "Opis"
+      }
+    },
+    "actions": {
+      "title": "Actions",
+      "details": "Details",
+      "edit": "Edit",
+      "delete": "Delete",
+      "add": {
+        "employees": "Add new employee",
+        "employeeTasks": "Add new employee task",
+        "tasks": "Add new task"
+      }
+    }
+  },
+  "details": {
+    "employees": {
+      "title": "Employee details",
+      "title_2": "Task details",
+      "field_1": "Name",
+      "field_2": "Surname",
+      "field_3": "E-mail",
+      "field_4": "Active",
+      "field_5": "Password"
+    },
+    "employeeTasks": {
+      "title": "Employee task details",
+      "field_1": "Name",
+      "field_2": "Surname",
+      "field_3": "Task name"
+    },
+    "tasks": {
+      "title": "Task details",
+      "title_2": "Employee details",
+      "field_1": "Title",
+      "field_2": "Created at",
+      "field_3": "Ended at",
+      "field_4": "Description"
+    },
+    "actions": {
+      "return": "Back",
+      "add": "add",
+      "edit": "Edit",
+      "cancel": "Cancel"
+    },
+    "errors": {
+      "error_0": "Form has errors",
+      "error_1": "Filed is required",
+      "error_2": "Filed should include from 5 to 10 characters."
+    }
+  },
+  "form": {
+    "auth": {
+      "logout": "Logout",
+      "login": "Login"
+    },
+    "employees": {
+      "title": "Employee details",
+      "title_2": "Task details",
+      "field_1": "Name",
+      "field_2": "Surname",
+      "field_3": "E-mail",
+      "field_4": "Active",
+      "field_5": "Password"
+    },
+    "employeeTasks": {
+      "title": "Employee task details",
+      "field_1": "Name",
+      "field_2": "Surname",
+      "field_3": "Task name"
+    },
+    "tasks": {
+      "title": "Task details",
+      "title_2": "Employee details",
+      "field_1": "Title",
+      "field_2": "Created at",
+      "field_3": "Ended at",
+      "field_4": "Description"
+    },
+    "actions": {
+      "return": "Back",
+      "add": "add",
+      "edit": "Edit",
+      "cancel": "Cancel"
+    },
+    "errors": {
+      "error_0": "Form has errors",
+      "error_1": "Filed is required",
+      "error_2": "Filed should include from 5 to 10 characters."
+    }
+  },
+  "emp": {
+    "fields": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email"
+    },
+    "list": {
+      "title": "Employees",
+      "addNew": "Add new employee",
+      "noData": "No employees in database",
+      "pageTitle": "List of employees"
+    },
+    "form": {
+      "employment": "History of employment",
+      "add": {
+        "pageTitle": "Adding a new employee",
+        "btnLabel": "Add the employee",
+        "confirm": {
+          "header": "Confirmation",
+          "text": "The new employee has been successfully created"
+        }
+      },
+      "edit": {
+        "pageTitle": "Editing an employee",
+        "btnLabel": "Save changes",
+        "confirm": {
+          "header": "Confirmation",
+          "text": "The employee has been successfully updated"
+        }
+      }
+    },
+    "field": {
+      "firstName": "emp.field.firstName"
+    }
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "title": "Login"
+  },
+  "validation": {
+    "messages": {
+      "notEmpty": "Fields is required",
+      "len_2_60": "Filed should include from 5 to 10 characters.",
+      "len_5_60": "Filed should include from 5 to 10 characters.",
+      "isEmail": "Filed should include correct email address",
+      "formErrors": "Form has errors"
+    }
+  }
+}
